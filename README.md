@@ -19,30 +19,30 @@ This Rust application converts images into ASCII art. It reads an image file, pr
 1.  Clone the Repository:
 
 ```
-]$ git clone https://github.com/pedromiguelmiranda/img-to-ascii.git
+git clone https://github.com/pedromiguelmiranda/img-to-ascii.git
 ```
 
 2. Build the Application:
 
 ```
-]$ cargo build --release
+cargo build --release
 ```
 
 3. Run Tests:
 ```
-]$ cargo test --release
+cargo test --release
 ```
 
 ### Docker Setup
 
 1. Build the Docker Image:
 ```
-]$ docker build -t image_to_ascii_converter .
+docker build -t image_to_ascii_converter .
 ```
 
 2. Run the Application in Docker:
 ```
-]$ docker run --rm -v $(pwd)/path/to/your/images:/images image_to_ascii_converter --image_path /images/your_image.jpg --width 80 --height 40
+docker run --rm -v $(pwd)/path/to/your/images:/images image_to_ascii_converter --image_path /images/your_image.jpg --width 80 --height 40
 ```
 
 **Note:**
@@ -69,7 +69,7 @@ Example command:
 
 To run the program with Docker, mount your local image directory to the container and pass the image path relative to the mounted directory:
 ```
-]$ docker run --rm -v $(pwd)/path/to/your/images:/images image_to_ascii_converter --image_path /images/your_image.jpg --width 80 --height 40
+docker run --rm -v $(pwd)/path/to/your/images:/images image_to_ascii_converter --image_path /images/your_image.jpg --width 80 --height 40
 
 ```
 ## Troubleshooting
