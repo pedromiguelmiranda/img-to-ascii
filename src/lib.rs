@@ -2,7 +2,7 @@ use image::{DynamicImage, GenericImageView, imageops::FilterType};
 use image::imageops::contrast;
 
 // A more nuanced set of ASCII characters
-pub const ASCII_CHARS: &[u8] = b"@%#*+=-:. ";
+pub const ASCII_CHARS: &[u8] = b"@%#*+=-:.<>$!!??<>";
 
 pub struct AsciiConverter {
     pub width: u32,
@@ -17,13 +17,11 @@ impl AsciiConverter {
     pub fn convert_to_ascii(&self, img: &DynamicImage) -> String {
         // Convert to grayscale
         let mut grayscale = img.grayscale();
-        
         // Enhance contrast
         grayscale = DynamicImage::ImageLuma8(contrast(&grayscale.to_luma8(), 1.5));
 
         // Adjust aspect ratio during resize to maintain clarity
         let resized = grayscale.resize_exact(self.width, self.height, FilterType::Lanczos3);
-        
         self.image_to_ascii(&resized)
     }
 
