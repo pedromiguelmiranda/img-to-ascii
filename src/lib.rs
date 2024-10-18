@@ -17,7 +17,6 @@ impl AsciiConverter {
     pub fn convert_to_ascii(&self, img: &DynamicImage) -> String {
         // Convert to grayscale
         let mut grayscale = img.grayscale();
-
         // Enhance contrast
         grayscale = DynamicImage::ImageLuma8(contrast(&grayscale.to_luma8(), 1.5));
 
