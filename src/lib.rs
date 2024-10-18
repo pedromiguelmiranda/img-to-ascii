@@ -23,7 +23,6 @@ impl AsciiConverter {
 
         // Adjust aspect ratio during resize to maintain clarity
         let resized = grayscale.resize_exact(self.width, self.height, FilterType::Lanczos3);
-
         self.image_to_ascii(&resized)
     }
 
