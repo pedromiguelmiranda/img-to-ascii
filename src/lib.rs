@@ -2,7 +2,7 @@ use image::{DynamicImage, GenericImageView, imageops::FilterType};
 use image::imageops::contrast;
 
 // A more nuanced set of ASCII characters
-pub const ASCII_CHARS: &[u8] = b"@QQQ%#**+=-:";
+pub const ASCII_CHARS: &[u8] = b"@QQQ%#OOOO*aaa+=BBB-:";
 
 pub struct AsciiConverter {
     pub width: u32,
