@@ -87,6 +87,7 @@ docker run --rm -v $(pwd)/path/to/your/images:/images image_to_ascii_converter -
 
 ## Contributing
 - Add text generation feature - from text to ascii art
+- add gif support.
 
 
 ## Contributing
